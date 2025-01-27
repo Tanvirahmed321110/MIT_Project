@@ -1,3 +1,107 @@
 @import url('./variable.css');
 @import url('./custom_class.css');
 @import url('./component.css');
+
+
+/*_____________________________
+
+        Header Start Here
+______________________________*/
+
+.header-top {
+    padding: 0;
+    color: var(--border-color);
+    background-color: var(--secondary-hover);
+}
+
+.header-top .my-container {
+    padding: 5px 16px;
+}
+
+.header-top .my-dropdown {
+    color: var(--secondary-color);
+}
+
+
+.header-top .left i {
+    font-size: 11px;
+}
+
+.header-top .left a:hover p {
+    text-decoration: underline;
+}
+
+.header-top .social li a {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-off);
+    color: var(--primary-color);
+
+}
+
+.header-top .right li a i {
+    transition: .4s linear;
+    font-size: var(--fs-sm);
+}
+
+.header-top .right li a:hover i {
+    transform: rotate(360deg);
+}
+
+
+
+
+
+
+
+.header-medile {
+    background-color: var(--secondary-color)
+}
+
+.header-medile-area {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.search .subcribe {
+    width: 550px;
+    position: relative;
+    padding: 2px;
+    padding-left: 6px;
+}
+
+.header-medile .subcribe button {
+    background: unset;
+    background-color: var(--secondary-color) !important;
+    top: 0 !important;
+}
+
+
+.header-medile .right i {
+    color: var(--white-off) !important;
+}
+
+.header-medile .right .icon {
+    width: 40px;
+    color: gainsboro;
+    border: 1px solid var(--white-off);
+    height: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.header-medile .right .build-btn {
+    width: 100%;
+    /* Full viewport height */
+    background: linear-gradient(270deg, #016bf8, #0f3f83);
+    background-size: 200% 200%;
+    /* Make it large for smooth movement */
+    animation: built-btn-animation 2s linear infinite;
+}

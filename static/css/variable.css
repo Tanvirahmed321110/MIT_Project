@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
 
 /* Remix Icon CDN */
-@import url("https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
 
 
 :root {
     /*______  Color  ______ */
     --primary-color: #016bf8;
-    --primary-hover-color: #0a5bc6;
+    --primary-hover-color: #4385dc;
     --secondary-color: #01293a;
     --orange: #ffc107;
     --green: #0aad0a;
@@ -32,7 +32,7 @@
     /*______  Font Size  ______ */
     --fs-xs: 12px;
     --fs-sm: 14px;
-    --fs-md: 15px;
+    --fs-md: 16px;
     --fs-lg: 18px;
     --fs-xl: 24px;
     --fs-xxl: 32px;
