@@ -51,7 +51,7 @@ h2 {
 
 h3 {
     font-size: var(--fs-xl);
-    line-height: 26px;
+    line-height: 40px;
 }
 
 h4 {
@@ -181,10 +181,10 @@ tr {
 /*____________  Reused Class  ____________*/
 .my-container,
 .my-container-sm {
-    padding: 16px 16px;
+    padding: 18px 16px;
     margin: 0px auto;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1300px;
 }
 
 .my-container-sm {

@@ -14,43 +14,19 @@ ______________________________*/
 }
 
 .header-top .my-container {
-    padding: 5px 16px;
+    padding: 8px 16px;
 }
 
-.header-top .my-dropdown {
-    color: var(--secondary-color);
+.header-top ul li a {
+    padding: 2px 0;
+    color: var(--border-color);
 }
 
-
-.header-top .left i {
-    font-size: 11px;
-}
-
-.header-top .left a:hover p {
+.header-top ul li a:hover {
     text-decoration: underline;
+    color: var(--border-color2);
 }
 
-.header-top .social li a {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white-off);
-    color: var(--primary-color);
-
-}
-
-.header-top .right li a i {
-    transition: .4s linear;
-    font-size: var(--fs-sm);
-}
-
-.header-top .right li a:hover i {
-    transform: rotate(360deg);
-}
 
 
 
@@ -64,11 +40,12 @@ ______________________________*/
 
 .header-medile-area {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 58% 40%;
+    gap: 2%;
 }
 
 .search .subcribe {
-    width: 550px;
+    width: 560px;
     position: relative;
     padding: 2px;
     padding-left: 6px;
@@ -78,6 +55,7 @@ ______________________________*/
     background: unset;
     background-color: var(--secondary-color);
     top: 0 !important;
+    color: var(--border-color);
 }
 
 .header-medile .subcribe button:hover {
@@ -99,33 +77,58 @@ ______________________________*/
     border-radius: 50%;
 }
 
-.header-medile .right .build-btn {
-    width: 100%;
-    /* Full viewport height */
+.header-medile .build {
     background: linear-gradient(270deg, #016bf8, #0f3f83);
     background-size: 200% 200%;
-    /* Make it large for smooth movement */
     animation: built-btn-animation 2s linear infinite;
+    border-radius: 8px;
+    width: 180px;
+    word-wrap: normal;
+    text-wrap: nowrap;
+    color: var(--border-color);
+    padding: 2px;
+}
+
+.header-medile .build .my-btn:hover {
+    background-color: var(--secondary-hover);
+}
+
+.header-medile .right .build-btn {
+    /* Full viewport height */
+    /* Make it large for smooth movement */
 }
 
 
 
 
+/* header-medile-bottom */
+.header-medile-bottom .item a {
+    font-size: var(--fs-sm);
+    color: var(--border-color);
+    position: relative;
+    padding: 0px 2px;
+}
 
+.header-medile-bottom .item a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 0%;
+    height: 1px;
+    background-color: var(--border-color2);
+    transition: .2s linear;
+}
 
-
-
-
-
-
-
-
-
+.header-medile-bottom .item a:hover::after {
+    left: 0;
+    width: 100%;
+}
 
 .hero-area {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 40px;
+    gap: 28px;
 }
 
 /*___________________    Hero Category ___________________  */
@@ -172,7 +175,7 @@ ______________________________*/
 .hero-area .all-department {
     width: 100%;
     overflow: auto;
-    min-height: 420px;
+    min-height: 480px;
 }
 
 .all-department.my-card {
@@ -343,5 +346,52 @@ ______________________________*/
 
 /*___________________    Hero Banner ___________________  */
 .hero-area .banner {
-    background-color: gainsboro;
+    /* background-color: gainsboro; */
+}
+
+
+
+/* special-offer */
+.special-offer .item {
+    height: 180px;
+    background-color: rgb(212, 208, 208);
+    border-radius: 8px;
+    background-image: url('https://img.freepik.com/free-photo/laptop-wooden-table-with-timer_53876-94694.jpg?t=st=1738058092~exp=1738061692~hmac=fd765e7ce9c147eeab5ffb8c1a5bb4b636b67185c0090c5e2290880cd049be10&w=1060');
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.special-offer .item:nth-child(2) {
+    background-image: url('https://img.freepik.com/free-vector/adenovirus-computer-screen_1308-47608.jpg?t=st=1738058581~exp=1738062181~hmac=f5a3c9dc5f34b9d4d76090e32e2c8f252503e6e5cee8698b2192ff5227b32968&w=996');
+}
+
+.special-offer .item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 11, 11, 0.465);
+}
+
+.special-offer .content {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px;
+    flex-direction: column;
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+    width: 80%;
+}
+
+.special-offer .content h4 {
+    color: var(--white);
 }

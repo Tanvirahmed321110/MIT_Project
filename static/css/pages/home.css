@@ -1,0 +1,13 @@
+.feature-category-area {
+    background-color: var(--white);
+    padding: 22px;
+}
+
+.feature-category-area .item {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: var(--white-off);
+    flex-direction: column;
+    justify-content: center;
+}
