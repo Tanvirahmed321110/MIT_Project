@@ -7,7 +7,6 @@
 
         Header Start Here
 ______________________________*/
-
 .header-top {
     padding: 0;
     color: var(--border-color);
@@ -58,7 +57,7 @@ ______________________________*/
 
 
 
-
+/*_________________  Header Medile  _________________*/
 .header-medile {
     background-color: var(--secondary-color)
 }
@@ -77,10 +76,13 @@ ______________________________*/
 
 .header-medile .subcribe button {
     background: unset;
-    background-color: var(--secondary-color) !important;
+    background-color: var(--secondary-color);
     top: 0 !important;
 }
 
+.header-medile .subcribe button:hover {
+    background-color: var(--secondary-hover);
+}
 
 .header-medile .right i {
     color: var(--white-off) !important;
@@ -104,4 +106,242 @@ ______________________________*/
     background-size: 200% 200%;
     /* Make it large for smooth movement */
     animation: built-btn-animation 2s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-area {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+}
+
+/*___________________    Hero Category ___________________  */
+.hero-area .all-department-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 14px 18px;
+    font-size: var(--fs-lg);
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+
+.hero-area .my-nav-item {
+    font-size: var(--fs-sm) !important;
+}
+
+.hero-area .my-nav-item .my-dropdown li {
+    color: var(--gray);
+    font-size: var(--fs-sm) !important;
+    font-weight: var(--fw-500);
+}
+
+.hero-area .my-nav-item .my-dropdown li:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.hero-area .my-nav-item .my-dropdown li a {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/*_______  all-department  _______*/
+.hero-area .all-department {
+    width: 100%;
+    overflow: auto;
+    min-height: 420px;
+}
+
+.all-department.my-card {
+    padding: 6px 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow: unset;
+}
+
+.hero-area .all-department .wrapper::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+}
+
+
+.hero-area .all-department .wrapper::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-color: var(--border-color2);
+}
+
+.hero-area .all-department .wrapper:hover::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+
+.hero-area .all-department .single-dept {
+    cursor: pointer;
+    padding: 4px 0;
+    padding: 6px 16px;
+    border-radius: 2px;
+}
+
+.hero-area .my-dropdown li {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 3px;
+}
+
+
+.hero-area .my-dropdown li:hover a {
+    color: var(--primary-color)
+}
+
+/* dropdown */
+
+.all-department .dropdown {
+    opacity: 0;
+    position: absolute;
+    left: 100%;
+    width: fit-content;
+    text-wrap: nowrap;
+    top: -4px;
+    background-color: var(--white);
+    padding: 14px 0;
+    box-shadow: var(--shadow-2);
+    border: 1px solid var(--border-color);
+    visibility: hidden;
+    transform: translateX(-25px);
+    transition: .2s linear;
+    z-index: -1;
+    min-width: 250px;
+}
+
+.all-department .dropdown li {
+    position: relative;
+}
+
+.all-department .dropdown li a {
+    padding: 2px 0;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-500);
+}
+
+.all-department li i {
+    font-size: var(--fs-xs);
+}
+
+
+/* without home  page */
+.all-department.other-page {
+    display: none;
+}
+
+.hover:hover .all-department.other-page {
+    display: block;
+    z-index: 4;
+}
+
+
+.all-department-btn:hover .all-department.other-page {
+    display: block;
+}
+
+
+.all-department li:hover>.dropdown {
+    opacity: 1;
+    top: -4px;
+    max-height: 2000px;
+    display: flex;
+    transform: translateX(0);
+    transition: .2s linear;
+    visibility: visible;
+    z-index: 12;
+}
+
+.all-department .dropdown li a:hover {
+    color: var(--primary-color);
+}
+
+.all-department .dropdown .col {
+    width: 100%;
+}
+
+.all-department .dropdown .col li {
+    padding: 4px 16px;
+    font-size: var(--fs-sm);
+    font-weight: 500;
+}
+
+.all-department .dropdown li i {
+    font-size: 11px;
+}
+
+.all-department .dropdown .col li:hover {
+    background-color: var(--white-off);
+    width: 100%;
+}
+
+/* single deprt */
+.all-department .single-dept.my-dropdown-parent .my-dropdown {
+    left: 100%;
+    z-index: 5;
+}
+
+.hero-area .all-department .single-dept p {
+    font-weight: 500;
+    font-size: var(--fs-sm);
+}
+
+.hero-area .all-department .single-dept::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 0px;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: .2s linear;
+}
+
+.hero-area .all-department .single-dept:hover::after {
+    width: 4px;
+    left: 0;
+}
+
+.hero-area .all-department .single-dept:hover {
+    background-color: var(--white-off);
+}
+
+.hero-area .all-department-btn i {
+    font-size: var(--fs-lg);
+}
+
+
+
+
+
+
+/*___________________    Hero Banner ___________________  */
+.hero-area .banner {
+    background-color: gainsboro;
 }
