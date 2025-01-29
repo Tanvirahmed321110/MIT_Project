@@ -12,7 +12,7 @@ export function openModalF(modalId, btnId) {
 
 // Close Modal Function
 export function closeButtonF(modalId) {
-    const closeButtons = document.querySelectorAll('.close-btn')
+    const closeButtons = document.querySelectorAll('.close-btn-right')
     const modal = document.getElementById(modalId)
 
     closeButtons.forEach(btn => {

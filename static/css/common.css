@@ -3,10 +3,9 @@
 @import url('./component.css');
 
 
-/*_____________________________
-
-        Header Start Here
-______________________________*/
+/*______________________________
+  ||     Header Start Here     ||
+_______________________________*/
 .header-top {
     padding: 0;
     color: var(--border-color);
@@ -14,7 +13,7 @@ ______________________________*/
 }
 
 .header-top .my-container {
-    padding: 8px 16px;
+    padding: 10px 16px;
 }
 
 .header-top ul li a {
@@ -66,7 +65,8 @@ ______________________________*/
     color: var(--white-off) !important;
 }
 
-.header-medile .right .icon {
+.header-medile .right .icon,
+.mobile-header-bottom .icon {
     width: 40px;
     color: gainsboro;
     border: 1px solid var(--white-off);
@@ -77,7 +77,8 @@ ______________________________*/
     border-radius: 50%;
 }
 
-.header-medile .build {
+.header-medile .build,
+.mobile-header-bottom .build {
     background: linear-gradient(270deg, #016bf8, #0f3f83);
     background-size: 200% 200%;
     animation: built-btn-animation 2s linear infinite;
@@ -93,15 +94,11 @@ ______________________________*/
     background-color: var(--secondary-hover);
 }
 
-.header-medile .right .build-btn {
-    /* Full viewport height */
-    /* Make it large for smooth movement */
-}
 
 
 
 
-/* header-medile-bottom */
+/*_________________  header medile bottom  ____________________*/
 .header-medile-bottom .item a {
     font-size: var(--fs-sm);
     color: var(--border-color);
@@ -130,6 +127,8 @@ ______________________________*/
     grid-template-columns: 1fr 3fr;
     gap: 28px;
 }
+
+
 
 /*___________________    Hero Category ___________________  */
 .hero-area .all-department-btn {
@@ -236,15 +235,25 @@ ______________________________*/
     transform: translateX(-25px);
     transition: .2s linear;
     z-index: -1;
-    min-width: 250px;
+    min-width: 300px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
 }
+
+.all-department .dropdown .col {
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+}
+
 
 .all-department .dropdown li {
     position: relative;
 }
 
 .all-department .dropdown li a {
-    padding: 2px 0;
+    padding: 3px 0;
     font-size: var(--fs-sm);
     font-weight: var(--fw-500);
 }
@@ -281,12 +290,12 @@ ______________________________*/
     z-index: 12;
 }
 
-.all-department .dropdown li a:hover {
-    color: var(--primary-color);
+.all-department .dropdown li a {
+    width: 100%;
 }
 
-.all-department .dropdown .col {
-    width: 100%;
+.all-department .dropdown li a:hover {
+    color: var(--primary-color);
 }
 
 .all-department .dropdown .col li {
@@ -342,15 +351,6 @@ ______________________________*/
 
 
 
-
-
-/*___________________    Hero Banner ___________________  */
-.hero-area .banner {
-    /* background-color: gainsboro; */
-}
-
-
-
 /* special-offer */
 .special-offer .item {
     height: 180px;
@@ -394,4 +394,168 @@ ______________________________*/
 
 .special-offer .content h4 {
     color: var(--white);
+}
+
+
+
+
+
+
+/*________________________________________
+  ||     Responsive 1080px Start Here     ||
+_________________________________________*/
+@media(max-width:1080px) {
+    .header-medile-area {
+        display: grid;
+        grid-template-columns: 48% 50%;
+        gap: 2%;
+    }
+
+    .header-medile .subcribe {
+        width: 300px;
+    }
+}
+
+/*________________________________________
+  ||     Responsive 991px Start Here     ||
+_________________________________________*/
+@media(max-width:991px) {
+    body {
+        margin-bottom: 40px;
+    }
+
+    .header-medile {
+        display: none;
+    }
+
+    .mobile-header {
+        background-color: var(--secondary-color);
+    }
+
+
+    /*_____  Mobile Header Bottom _____ */
+    .mobile-header-bottom {
+        position: fixed;
+        z-index: 4;
+        background-color: var(--secondary-color);
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+        padding: 20px 16px;
+    }
+
+
+    /*_____  Build Button _____ */
+    .mobile-header-bottom .build {
+        width: fit-content;
+    }
+
+    .mobile-header-bottom .build button {
+        padding: 12px 20px;
+    }
+
+    .mobile-header-bottom .build button {
+        font-size: 14px;
+    }
+
+    /*_____  Build dropdown _____ */
+    .mobile-header-bottom .build-dropdown {
+        position: absolute;
+        top: -44px;
+        display: none;
+        z-index: 2;
+    }
+
+    .mobile-header-bottom .build:hover .build-dropdown {
+        display: flex;
+    }
+
+
+    .category .left {
+        display: none;
+    }
+
+
+
+
+    /*______ Mobile Category  ______*/
+    .all-category {
+        background-color: var(--white);
+        width: 300px;
+        border: 1px solid var(--border-color);
+        position: fixed;
+        left: -100%;
+        top: 0;
+        z-index: 5;
+        height: 100dvh;
+        overflow: auto;
+        transition: .3s linear;
+    }
+
+    .all-category.active {
+        left: 0;
+    }
+
+
+
+    .category {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .dropdown,
+    .nested-dropdown {
+        display: none;
+        padding-left: 12px;
+        width: 100%;
+    }
+
+    .all-category .open-btn {
+        padding: 12px;
+        background-color: var(--primary-color);
+        color: var(--white);
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .all-category .open-btn:hover {
+        background-color: var(--primary-color);
+    }
+
+    .nested-dropdown {
+        padding: 6px;
+        padding-left: 20px;
+        border-left: 2px solid var(--primary-color);
+    }
+
+    .dropdown.active,
+    .nested-dropdown.active {
+        display: block;
+    }
+
+    /* Style for plus and minus icons */
+    .plus-minus-btn {
+        font-size: 16px;
+    }
+
+    .subcategory-btn {
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+    }
+
+
+    /* nested-dropdown */
+    .nested-dropdown ul li a {
+        display: block;
+        border-bottom: 1px solid var(--border-color);
+        padding: 6px;
+        font-size: 14px !important
+    }
 }

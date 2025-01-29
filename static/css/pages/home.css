@@ -1,3 +1,6 @@
+/*_______________________________
+  ||     Feature Start Here     ||
+________________________________*/
 .feature-category-area {
     background-color: var(--white);
     padding: 22px;
@@ -10,4 +13,77 @@
     background-color: var(--white-off);
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
+
+
+    /*_____ Feature _____ */
+    .feature-category-area .item {
+        width: 100px;
+        height: 100px;
+    }
+
+    .feature-category-area {
+        row-gap: 12px;
+    }
+
+
+
+    .hero-area {
+        grid-template-columns: 1fr;
+    }
+
+    .hero .my-container {
+        padding-top: 0;
+    }
+
+    .hero-area {
+        grid-template-columns: 1fr;
+    }
+
+
+    .banner .slide {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+@media (max-width:480px) {
+
+    .banner .slide {
+        width: 100%;
+    }
+}
+
+@media (max-width:400px) {
+    .hero-area {
+        width: 100%;
+    }
+
+    .slides {
+        width: calc(100% - 160px) !important;
+    }
+
+    .banner .slide {
+        width: calc(100% - 160px) !important;
+    }
 }

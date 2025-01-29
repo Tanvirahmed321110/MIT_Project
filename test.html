@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Smooth Infinite Slider</title>
+        <link rel="stylesheet" href="./static/css/custom_class.css">
         <style>
             * {
                 margin: 0;
@@ -14,9 +15,6 @@
 
             body {
                 font-family: Arial, sans-serif;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 height: 100vh;
                 background-color: #f4f4f9;
             }
@@ -96,10 +94,117 @@
                     padding: 8px 12px;
                 }
             }
+
+            .all-category {
+                background-color: #fff;
+                width: 340px;
+                border: 1px solid #dcdbdb;
+            }
+
+            .all-category .plus-minus-btn {
+                padding: 2px;
+                cursor: pointer;
+            }
+
+            .all-category .item {
+                border-bottom: 1px solid #dcdbdb;
+                font-size: 16px;
+                font-weight: 500;
+                transition: .2s linear;
+            }
+
+            .all-category .item-btn {
+                padding: 10px 14px;
+                cursor: pointer;
+            }
+
+            .all-category .item-btn.active {
+                background-color: blueviolet;
+            }
+
+            .all-category .item-dropdown {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s linear;
+            }
+
+            .all-category .item-dropdown.active {
+                max-height: 500px;
+            }
+
+
+            .all-category .item-dropdown .item:last-child,
+            .all-category .item:last-child {
+                border-bottom: none;
+            }
+
+            .all-category .item-dropdown .item {
+                padding-right: 0;
+                margin-left: 12px;
+                padding-left: 0;
+                font-size: 14px;
+            }
+
+            .all-category .item-sub-btn {
+                padding: 8px 12px;
+                padding-left: 24px;
+                font-size: 14px;
+                border-bottom: 1px solid #f3f3f3;
+            }
         </style>
     </head>
 
     <body>
+
+        <div class="" style="margin: 45px;">
+            <div class="all-category">
+                <div>
+                    <ul class="my-flex-column my-gap-0 main">
+                        <li class="item ">
+                            <div class="my-flex-between item-btn active">
+                                <div>laptop</div>
+                                <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
+                            </div>
+                            <div class="item-dropdown">
+                                <ul class="">
+                                    <li class=" my-flex-between">
+                                        <div></div>
+                                        <div class="item-dropdown">
+                                            <ul class="">
+                                                <li class="item-sub-btn my-flex-between">
+                                                    <div>2nd dropdown</div>
+                                                    <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
+                                                </li>
+                                                <li class="item-sub-btn my-flex-between">
+                                                    <div>2nd dropdown</div>
+                                                    <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
+                                                </li>
+                                                <li class="item-sub-btn my-flex-between">
+                                                    <div>2nd dropdown</div>
+                                                    <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="item-sub-btn my-flex-between">
+                                        <div>2nd dropdown</div>
+                                        <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
+                                    </li>
+                                    <li class="item-sub-btn my-flex-between">
+                                        <div>2nd dropdown</div>
+                                        <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- More list items can be added here -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div class="slider">
             <div class="slides">
                 <div class="slide">Slide 4</div> <!-- Clone of the last slide -->
@@ -112,24 +217,65 @@
             <button class="prev">&larr;</button>
             <button class="next">&rarr;</button>
         </div>
+
         <script>
+            const itemButtons = document.querySelectorAll('.item-btn');
+            itemButtons.forEach(btn => {
+                btn.addEventListener("click", function (e) {
+                    e.stopPropagation();
+
+                    itemButtons.forEach(single => {
+                        single.classList.remove('active')
+                    })
+                    btn.classList.toggle('active')
+
+                    let item = this.closest(".item");
+                    let dropdown = item.querySelector(".item-dropdown");
+                    let icon = btn.querySelector('.plus-minus-btn i');
+
+                    icon.classList.toggle('fa-plus');
+                    icon.classList.toggle('fa-minus');
+
+                    dropdown.classList.toggle('active');
+
+                    if (dropdown.classList.contains('active')) {
+                        dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+                    } else {
+                        dropdown.style.maxHeight = "0";
+                    }
+
+                    itemButtons.forEach(single => {
+                        if (single !== btn) {
+                            let otherItem = single.closest('.item');
+                            let otherDropdown = otherItem.querySelector('.item-dropdown');
+                            let otherIcon = single.querySelector('.plus-minus-btn i');
+
+                            otherIcon.classList.remove('fa-minus');
+                            otherIcon.classList.add('fa-plus');
+
+                            if (otherDropdown) {
+                                otherDropdown.classList.remove('active');
+                                otherDropdown.style.maxHeight = "0";
+                            }
+                        }
+                    });
+                });
+            });
+
             const slides = document.querySelector('.slides');
             const slide = document.querySelectorAll('.slide');
             const totalSlides = slide.length;
             const slideWidth = slide[0].clientWidth;
 
-            let currentIndex = 1; // Start on the first "real" slide
+            let currentIndex = 1;
 
-            // Set initial position to the first "real" slide
             slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
 
-            // Update slider position
             function updateSlider() {
                 slides.style.transition = 'transform 0.5s ease-in-out';
                 slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
             }
 
-            // Handle looping
             slides.addEventListener('transitionend', () => {
                 if (currentIndex === 0) {
                     slides.style.transition = 'none';
@@ -142,7 +288,6 @@
                 }
             });
 
-            // Go to the next slide
             document.querySelector('.next').addEventListener('click', () => {
                 if (currentIndex < totalSlides - 1) {
                     currentIndex++;
@@ -150,34 +295,11 @@
                 }
             });
 
-            // Go to the previous slide
             document.querySelector('.prev').addEventListener('click', () => {
                 if (currentIndex > 0) {
                     currentIndex--;
                     updateSlider();
                 }
-            });
-
-            // Auto-slide
-            let autoSlide = setInterval(() => {
-                if (currentIndex < totalSlides - 1) {
-                    currentIndex++;
-                    updateSlider();
-                }
-            }, 4000);
-
-            // Pause auto-slide on hover
-            document.querySelector('.slider').addEventListener('mouseover', () => {
-                clearInterval(autoSlide);
-            });
-
-            document.querySelector('.slider').addEventListener('mouseout', () => {
-                autoSlide = setInterval(() => {
-                    if (currentIndex < totalSlides - 1) {
-                        currentIndex++;
-                        updateSlider();
-                    }
-                }, 4000);
             });
         </script>
     </body>

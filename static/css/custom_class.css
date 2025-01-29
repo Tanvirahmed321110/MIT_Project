@@ -21,6 +21,7 @@ body {
     color: var(--secondary-color);
     background-color: var(--border-color);
     letter-spacing: .1px;
+    padding-bottom: 20px;
 }
 
 
@@ -573,7 +574,10 @@ tr {
 }
 
 
-
+/*_____ Hover_____ */
+.hover-underline:hover {
+    text-decoration: underline;
+}
 
 
 /*______  Padding  ______*/

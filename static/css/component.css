@@ -110,7 +110,7 @@ ___________________________________*/
     height: 45px;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 4;
+    z-index: 2;
 }
 
 .slider button.prev {
@@ -408,6 +408,17 @@ ___________________________________*/
 
 .my-primary-btn:hover {
     background: var(--gradient-2);
+}
+
+/* close button */
+.close-btn-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 9px 12px !important;
 }
 
 
@@ -796,7 +807,7 @@ textarea::placeholder {
     display: block;
     height: 3px;
     width: 100%;
-    background-color: #333;
+    background-color: #fff;
     border-radius: 2px;
     transition: all 0.3s ease;
 }

@@ -11,13 +11,13 @@
 
     <body>
         <!-- =============================================== -->
-        <!-- ==========     Header Section  Start    ======== -->
+        <!-- ==========    Header Section  Start    ======== -->
         <!-- =============================================== -->
         <header>
 
 
             <!--________________  Header Top Here _______________-->
-            <div class="header-top my-bg-primary-hover">
+            <div class="header-top my-d-md-none my-bg-primary-hover">
                 <div class="my-container">
                     <div class="header-top-area my-d-lg-none my-flex-center ">
                         <ul class="my-flex-center my-gap-4 my-fs-xs my-fw-medium">
@@ -60,6 +60,431 @@
             </div>
 
 
+
+            <!--____________________  Mobile Header  ____________________  -->
+            <div class="mobile-header my-d-none my-d-md-block">
+
+
+                <!--_____ For Header Top _____ -->
+                <div class="my-flex-between my-p-3 my-px-4">
+                    <!-- logo -->
+                    <a href="index.html">
+                        <h2 class="my-text-white">MIT</h2>
+                    </a>
+
+                    <!-- menu button -->
+                    <button class="menu-icon" id="mobile-menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+
+                <!--_____ For Bottom Header Fixed _____-->
+                <div class="mobile-header-bottom my-flex-between my-align-center">
+                    <ul class="my-d-flex my-gap-2 my-align-center left-icons">
+
+                        <!-- wise list -->
+                        <li class="my-tooltip">
+                            <span class="icon my-text-white">
+                                <i class="fa-regular fa-heart"></i>
+                            </span>
+                            <div class="base-round active">2</div>
+                            <!-- Tooltip -->
+                            <span class="show-text">wish list items</span>
+                        </li>
+
+
+                        <!-- wise list -->
+                        <li class="my-tooltip">
+                            <span class="icon my-text-white">
+                                <i class="fa-solid fa-code-compare"></i>
+                            </span>
+                            <div class="base-round active">1</div>
+                            <!-- Tooltip -->
+                            <span class="show-text">compalre</span>
+                        </li>
+
+
+                        <!-- card list -->
+                        <li class="my-tooltip" id="shopping-cart-btn">
+                            <span class="icon">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                            <div class="base-round">0</div>
+
+                            <!-- tooltip text -->
+                            <span class="show-text">All add to card item</span>
+                        </li>
+                    </ul>
+
+
+                    <div class="build my-flex-center my-p-relative">
+                        <button class="my-btn build-btn"> Build</button>
+
+                        <div class="build-dropdown build my-align-center">
+                            <button class="my-btn build-btn pc-build">PC Build</button>
+                            <span>|</span>
+                            <button class="my-btn build-btn cc-build">CC Build</button>
+                        </div>
+                    </div>
+
+
+                    <div class="right">
+                        <div class="my-text-center my-text-white-off my-fw-medium ">
+                            <p class="my-text-white my-mb-1 my-fs-xs">Account</p>
+                            <span class="my-fs-md"><i class="fa-regular fa-circle-user"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!--_____ For category _____-->
+                <div class="all-category" id="all-category">
+
+                    <!-- Head -->
+                    <div>
+                        <h3 class="my-p-2">All Category</h3>
+                        <button class="my-btn my-primary-btn close-btn-right"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+
+                    <!-- catrgory item -->
+                    <div class="category">
+                        <button class="open-btn">
+                            Laptop
+                            <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                        </button>
+                        <div class="dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Dell
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 1.1.1</a></li>
+                                            <li><a href="#">Item 1.1.2</a></li>
+                                            <li><a href="#">Item 1.1.3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Hp
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 1.2.1</a></li>
+                                            <li><a href="#">Item 1.2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- catrgory item -->
+                    <div class="category">
+                        <button class="open-btn">
+                            Monitor
+                            <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                        </button>
+                        <div class="dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Samsung
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 2.1.1</a></li>
+                                            <li><a href="#">Item 2.1.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        LG
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 2.2.1</a></li>
+                                            <li><a href="#">Item 2.2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- catrgory item -->
+                    <div class="category">
+                        <button class="open-btn">
+                            Phone
+                            <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                        </button>
+                        <div class="dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        iPhone
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 3.1.1</a></li>
+                                            <li><a href="#">Item 3.1.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Samsung Galaxy
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 3.2.1</a></li>
+                                            <li><a href="#">Item 3.2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- catrgory item -->
+                    <div class="category">
+                        <button class="open-btn">
+                            Laptop
+                            <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                        </button>
+                        <div class="dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Dell
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 1.1.1</a></li>
+                                            <li><a href="#">Item 1.1.2</a></li>
+                                            <li><a href="#">Item 1.1.3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Hp
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 1.2.1</a></li>
+                                            <li><a href="#">Item 1.2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- catrgory item -->
+                    <div class="category">
+                        <button class="open-btn">
+                            Monitor
+                            <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                        </button>
+                        <div class="dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Samsung
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 2.1.1</a></li>
+                                            <li><a href="#">Item 2.1.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        LG
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 2.2.1</a></li>
+                                            <li><a href="#">Item 2.2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- catrgory item -->
+                    <div class="category">
+                        <button class="open-btn">
+                            Phone
+                            <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                        </button>
+                        <div class="dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        iPhone
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 3.1.1</a></li>
+                                            <li><a href="#">Item 3.1.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Samsung Galaxy
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 3.2.1</a></li>
+                                            <li><a href="#">Item 3.2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- catrgory item -->
+                    <div class="category">
+                        <button class="open-btn">
+                            Laptop
+                            <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                        </button>
+                        <div class="dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Dell
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 1.1.1</a></li>
+                                            <li><a href="#">Item 1.1.2</a></li>
+                                            <li><a href="#">Item 1.1.3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Hp
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 1.2.1</a></li>
+                                            <li><a href="#">Item 1.2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- catrgory item -->
+                    <div class="category">
+                        <button class="open-btn">
+                            Monitor
+                            <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                        </button>
+                        <div class="dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Samsung
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 2.1.1</a></li>
+                                            <li><a href="#">Item 2.1.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        LG
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 2.2.1</a></li>
+                                            <li><a href="#">Item 2.2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- catrgory item -->
+                    <div class="category">
+                        <button class="open-btn">
+                            Phone
+                            <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                        </button>
+                        <div class="dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        iPhone
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 3.1.1</a></li>
+                                            <li><a href="#">Item 3.1.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="subcategory-btn">
+                                        Samsung Galaxy
+                                        <span class="plus-minus-btn"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                    <div class="nested-dropdown">
+                                        <ul>
+                                            <li><a href="#">Item 3.2.1</a></li>
+                                            <li><a href="#">Item 3.2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
             <!--________________  Header Meddil Here _______________-->
             <div class="header-medile ">
                 <div class="my-container">
@@ -67,13 +492,14 @@
 
                         <!-- Left -->
                         <div class="left my-flex-between ">
+                            <!-- logo -->
                             <a href="index.html">
                                 <h2 class="my-text-white">MIT</h2>
                             </a>
 
 
                             <!-- Search -->
-                            <div class=" search">
+                            <div class="search">
                                 <form action="#" class="subcribe my-d-flex my-align-center">
                                     <input type="text" placeholder="Search Products">
                                     <button class="my-btn my-primary-btn">Search</button>
@@ -84,7 +510,7 @@
 
 
                         <!-- _____Header Midel Right_____ -->
-                        <div class="right my-d-flex my-justify-end my-align-center my-gap-6">
+                        <div class="right my-d-flex my-justify-end my-align-center my-gap-8">
                             <ul class="my-d-flex my-gap-1 my-align-center right-icons">
 
                                 <!-- wise list -->
@@ -130,7 +556,10 @@
                                 <div>
                                     <p class="my-text-white-off">Account</p>
                                     <div class="my-text-white-off my-fs-xs">
-                                        <span>login / register</span>
+                                        <div class="my-d-flex my-align-center my-gap-1">
+                                            <button class="hover-underline">login</button> /
+                                            <button class="hover-underline">register</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +573,7 @@
                     </div>
 
                     <!--________________  Header Medile Bottom Here  _______________-->
-                    <div class="header-medile-bottom my-mt-4">
+                    <div class="header-medile-bottom my-mt-5">
                         <div class="my-flex-center my-gap-6 my-text-white">
                             <div class="item">
                                 <a href="#">Happy Hours</a>
@@ -196,7 +625,7 @@
                                     <i class="fas fa-bars"></i>
 
                                     <div class="my-flex-center my-gap-4">
-                                        <span>All Departments</span>
+                                        <span>All Category</span>
                                         <span class="my-mt-1"><i class="fa-solid fa-angle-down"></i></span>
                                     </div>
                                 </div>
@@ -208,44 +637,90 @@
 
                                         <!-- single dept -->
                                         <li class="my-p-relative  my-flex-between my-gap-0 single-dept ">
-                                            <p>Desktop </p>
-                                            <span><i class="fa-solid fa-angle-right"></i></span>
+
+                                            <!-- Main hover -->
+                                            <div class=" my-flex-between my-w-100">
+                                                <p>Desktop</p>
+                                                <span><i class="fa-solid fa-angle-right"></i></span>
+                                            </div>
 
                                             <!-- main dropdown -->
-                                            <ul class="dropdown  ">
+                                            <div class="dropdown">
                                                 <ul class="col">
                                                     <li>
                                                         <div class="my-flex-between">
-                                                            <span>Laptop</span>
-                                                            <i class="fa-solid fa-angle-right"></i>
+                                                            <span>Desktop Offer</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <!-- sub hover -->
+                                                        <div class=" my-flex-between my-w-100">
+                                                            <p>MIT PC</p>
+                                                            <span><i class="fa-solid fa-angle-right"></i></span>
                                                         </div>
 
                                                         <!-- dropdown -->
                                                         <ul class="dropdown my-flex-column my-gap-1">
-                                                            <li><a href="#">Plastic Toy</a></li>
-                                                            <li><a href="#">Boy Toy</a></li>
-                                                            <li><a href="#">Child Toy</a></li>
-                                                            <li><a href="#">Girls Toy</a></li>
-                                                            <li><a href="#">Common Toy</a></li>
-                                                            <li class="">
-                                                                <div class="my-flex-between">
-                                                                    <span>Still Toys</span>
-                                                                    <i class="fa-solid fa-angle-right"></i>
-                                                                </div>
-                                                                <!-- dropdown -->
-                                                                <ul class="dropdown my-flex-column">
-                                                                    <li><a href="">Low Price</a></li>
-                                                                    <li><a href="">Height Price</a></li>
-                                                                </ul>
-                                                            </li>
+                                                            <li><a href="#">Intel PC</a></li>
+                                                            <li><a href="#">Ryzen PC</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="#">PC Component</a></li>
-                                                    <li><a href="#">Monitor</a></li>
-                                                    <li><a href="#">Accessories</a></li>
-                                                    <li><a href="#">Office Equipment</a></li>
-                                                    <li><a href="#">Security Surveillance</a></li>
-                                                    <li><a href="#">Gadget Waki</a></li>
+
+                                                    <li>
+                                                        <!-- sub hover -->
+                                                        <div class="my-flex-between my-w-100">
+                                                            <p>Gaming PC</p>
+                                                            <span><i class="fa-solid fa-angle-right"></i></span>
+                                                        </div>
+
+                                                        <!-- dropdown -->
+                                                        <ul class="dropdown my-flex-column my-gap-1">
+                                                            <li><a href="#">Intel PC</a></li>
+                                                            <li><a href="#">Ryzen PC</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#">Corporate/Office PC</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <!-- sub hover -->
+                                                        <div class="my-flex-between my-w-100">
+                                                            <p>PC Combo</p>
+                                                            <span><i class="fa-solid fa-angle-right"></i></span>
+                                                        </div>
+
+                                                        <!-- dropdown -->
+                                                        <ul class="dropdown my-flex-column my-gap-1">
+                                                            <li><a href="#">AMD Combo</a></li>
+                                                            <li><a href="#">GPU Combo</a></li>
+                                                            <li><a href="#">Intel Combo</a></li>
+                                                        </ul>
+                                                    </li>
+
+
+                                                    <li>
+                                                        <!-- sub hover -->
+                                                        <div class="my-flex-between my-w-100">
+                                                            <p>Brand PC</p>
+                                                            <span><i class="fa-solid fa-angle-right"></i></span>
+                                                        </div>
+
+                                                        <!-- dropdown -->
+                                                        <ul class="dropdown my-flex-column my-gap-1">
+                                                            <li><a href="#">HP</a></li>
+                                                            <li><a href="#">Dell</a></li>
+                                                            <li><a href="#">Lenovo</a></li>
+                                                            <li><a href="#">Asus</a></li>
+                                                            <li><a href="#">MSI</a></li>
+                                                            <li><a href="#">Apple</a></li>
+                                                            <li><a href="#">Walton</a></li>
+                                                            <li><a href="#">Value-Top</a></li>
+                                                            <li><a href="#">Teclast</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Porable Mini PC</a></li>
                                                     <li><a href="#">Photography</a></li>
                                                     <li><a href="#">Gaming Product</a></li>
                                                     <li><a href="#">Networking</a></li>
@@ -257,7 +732,7 @@
                                                         <a href="#">Toys</a>
                                                     </li>
                                                 </ul>
-                                            </ul>
+                                            </div>
                                         </li>
 
 
@@ -371,7 +846,7 @@
                             </div>
 
                             <!-- Offer Area -->
-                            <div class="special-offer my-grid-2 my-gap-3 my-mt-3">
+                            <div class="special-offer my-grid-2 my-grid-md-1 my-gap-3 my-mt-3">
                                 <div class="item">
                                     <div class="content">
                                         <h4>OFFER 20%</h4>
@@ -438,7 +913,7 @@
                     <div class="feature-category">
                         <div class="section-head">
                             <h3>Feature Category</h3>
-                            <p>our feture category</p>
+                            <p>our feature category</p>
                         </div>
 
                         <div class="feature-category-area my-radius-md my-d-flex flex-wrap my-gap-6 my-mt-6">
@@ -525,7 +1000,11 @@
 
 
 
-        <script>
+        <script type="module">
+            import { openModalF, closeButtonF, updateQuantity, openSearchDropdown, deleteF, toggleF, activeF } from './static/js/utilitis.js';
+
+            closeButtonF('all-category')
+
             function initSlider(sliderClass) {
                 const slider = document.querySelector(`.${sliderClass}`);
                 const slides = slider.querySelector('.slides');
@@ -598,6 +1077,83 @@
             }
 
             initSlider('slider-1')
+
+
+
+
+
+
+
+
+
+
+
+            // Toggle category dropdowns and icon
+            document.querySelectorAll('.open-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const dropdown = this.nextElementSibling; // The dropdown div
+                    const icon = this.querySelector('.plus-minus-btn i'); // The plus/minus icon
+
+                    // Close all other dropdowns and reset their icons
+                    document.querySelectorAll('.dropdown').forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active'); // Close other dropdowns
+                            const otherIcon = otherDropdown.previousElementSibling.querySelector('.plus-minus-btn i');
+                            if (otherIcon) {
+                                otherIcon.classList.remove('fa-minus'); // Change icon to plus
+                                otherIcon.classList.add('fa-plus');
+                            }
+                        }
+                    });
+
+                    // Toggle the current dropdown
+                    dropdown.classList.toggle('active');
+
+                    // Toggle the icon for the current dropdown
+                    if (dropdown.classList.contains('active')) {
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    } else {
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    }
+                });
+            });
+
+            // Toggle subcategory dropdowns and icon
+            document.querySelectorAll('.subcategory-btn').forEach(subcategory => {
+                subcategory.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent navigation
+                    const nestedDropdown = this.nextElementSibling; // The nested dropdown div
+                    const icon = this.querySelector('.plus-minus-btn i'); // The plus/minus icon for nested dropdown
+
+                    // Close all other nested dropdowns and reset their icons
+                    document.querySelectorAll('.nested-dropdown').forEach(otherNestedDropdown => {
+                        if (otherNestedDropdown !== nestedDropdown) {
+                            otherNestedDropdown.classList.remove('active'); // Close other nested dropdowns
+                            const otherIcon = otherNestedDropdown.previousElementSibling.querySelector('.plus-minus-btn i');
+                            otherIcon.classList.remove('fa-minus');
+                            otherIcon.classList.add('fa-plus');
+                        }
+                    });
+
+                    // Toggle the current nested dropdown
+                    nestedDropdown.classList.toggle('active');
+
+                    // Toggle the icon for the current nested dropdown
+                    if (nestedDropdown.classList.contains('active')) {
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    } else {
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    }
+                });
+            });
+
+
+
+            toggleF('all-category', 'mobile-menu-icon');
         </script>
     </body>
 
