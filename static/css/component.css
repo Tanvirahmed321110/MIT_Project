@@ -1137,7 +1137,7 @@ input[type="radio"]:checked::after {
 
 
 /*****  Price  *****/
-.product-cart .name h4 {
+.product-cart .name h5 {
     transition: .2s;
 }
 
@@ -1147,7 +1147,7 @@ input[type="radio"]:checked::after {
     font-size: 13px;
 }
 
-.product-cart .name:hover h4 {
+.product-cart .name:hover h5 {
     color: var(--primary-color);
 }
 

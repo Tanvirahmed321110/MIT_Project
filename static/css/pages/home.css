@@ -222,7 +222,14 @@ ____________________________________*/
     border-radius: 12px;
     align-items: center;
     justify-content: center;
+}
 
+.subcibe-discount-content,
+.visit-shop-content {
+    max-width: 1000px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .subcibe-discount-area form {
@@ -246,7 +253,7 @@ ____________________________________*/
 }
 
 .subcibe-discount-area .info {
-    /* max-width: 240px; */
+    max-width: 300px;
     margin-top: 12px;
     color: var(--border-color);
 }
@@ -255,9 +262,57 @@ ____________________________________*/
 
 
 
+.testimonial .swiper-slide {
+    margin-right: 0px !important;
+}
 
+.testimonial-item {
+    padding: 16px 8px;
+    padding-bottom: 8px;
+    margin: 0 8px;
+}
 
+.testimonial-item .rating i {
+    color: var(--primary-color);
+    margin-left: -2px;
+}
 
+.testimonial-item .profile img {
+    border: 4px solid var(--border-color2);
+    height: 75px;
+    width: 75px;
+    padding: 2px;
+}
+
+.testimonial-item .profile p {
+    color: var(--gray);
+}
+
+.testimonial-content {
+    position: relative;
+    background-color: var(--border-color) !important;
+    margin-top: 30px;
+    padding: 16px;
+}
+
+.testimonial-content p {
+    height: 70px;
+    overflow: hidden;
+}
+
+.testimonial-content::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--border-color);
+    z-index: 2;
+    clip-path: polygon(51% 14%, 0% 100%, 100% 100%);
+    box-shadow: var(--shadow-2);
+}
 
 
 
@@ -308,6 +363,13 @@ ____________________________________*/
 @media (max-width:769px) {
     .subcibe-discount-area {
         height: 240px;
+    }
+
+    .subcibe-discount-content,
+    .visit-shop-content {
+        gap: 20px;
+        align-items: flex-start;
+        justify-content: center;
     }
 }
 
