@@ -132,7 +132,7 @@ _______________________________*/
 
 /*_______  all-department  _______*/
 .hero-area .all-department {
-    min-width: 340px;
+    min-width: 300px;
     width: 100%;
     overflow: auto;
     min-height: 480px;
@@ -200,7 +200,7 @@ _______________________________*/
     transform: translateX(-25px);
     transition: .2s linear;
     z-index: -1;
-    min-width: 300px;
+    min-width: 280px;
     max-width: 400px;
     width: 100%;
     border-radius: 8px;
@@ -370,7 +370,7 @@ _______________________________*/
 
 .all-category {
     position: absolute;
-    top: -200%;
+    top: -500%;
 }
 
 
@@ -459,7 +459,7 @@ _________________________________________*/
     /*______ Mobile Category  ______*/
     .all-category {
         background-color: var(--white);
-        width: 300px;
+        width: 280px;
         border: 1px solid var(--border-color);
         position: fixed;
         left: -100%;

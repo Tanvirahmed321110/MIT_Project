@@ -1424,6 +1424,14 @@ tr {
         justify-content: space-between;
     }
 
+    .my-align-md-start {
+        align-items: flex-start;
+    }
+
+    .my-justify-md-start {
+        justify-content: flex-start;
+    }
+
     .my-d-md-flex {
         display: flex;
     }
@@ -1474,6 +1482,14 @@ tr {
 
     .my-flex-sm-between {
         justify-content: space-between;
+    }
+
+    .my-align-sm-start {
+        align-items: flex-start;
+    }
+
+    .my-justify-sm-start {
+        justify-content: flex-start;
     }
 
     .my-d-sm-grid {
@@ -1535,6 +1551,14 @@ tr {
 
     .my-flex-xs-column {
         flex-direction: column;
+    }
+
+    .my-align-xs-start {
+        align-items: flex-start;
+    }
+
+    .my-justify-xs-start {
+        justify-content: flex-start;
     }
 
     .my-grid-xs-1 {

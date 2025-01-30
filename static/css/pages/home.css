@@ -37,7 +37,7 @@ ________________________________*/
 /*___________________    Hero Category ___________________  */
 .hero-area {
     display: grid;
-    grid-template-columns: 1.1fr 3fr;
+    grid-template-columns: 1fr 3fr;
     gap: 28px;
 }
 
@@ -80,14 +80,176 @@ ________________________________*/
 .slider-banner {
     margin: auto;
     position: relative;
-    border-radius: 12px;
+    border-radius: 10px;
     height: 350px;
-    background-color: gainsboro;
+    background-color: rgb(173, 170, 170);
 }
 
 
 
 
+
+
+
+
+.visit-shop {
+    height: 200px;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-hover-color));
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.visit-shop .my-btn {
+    border: 2px solid var(--border-color2);
+    padding: 18px 34px;
+    font-size: 17px !important;
+}
+
+
+
+
+
+
+
+
+
+/*_______________________________
+  ||     Brand Section Here     ||
+________________________________*/
+
+.brand-section .my-container {
+    padding-bottom: 0;
+}
+
+.marquee .marqueeone {
+    animation: slider-animation 35s linear infinite;
+}
+
+.marquee {
+    height: 160px;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.marqueeone img {
+    width: 80%;
+    max-width: 250px;
+    height: 80%;
+    max-width: 240px;
+    border-right: 1px solid var(--white-off);
+}
+
+.marquee div {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes slider-animation {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+
+
+/*__________________________________
+  ||     achivment Section Here     ||
+____________________________________*/
+.achivment .item {
+    padding: 4px;
+    border: 2px solid var(--white);
+}
+
+.achivment .my-card {
+    box-shadow: unset;
+    background-color: unset;
+    border: 2px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0;
+    height: 170px;
+}
+
+.achivment .item h4 {
+    color: var(--gray);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*__________________________________
+  ||     Subcribe Section Here     ||
+____________________________________*/
+.subcibe-app {
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
+
+.subcibe-discount-area {
+    height: 200px;
+    background: linear-gradient(to left, var(--primary-color), var(--primary-hover-color));
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.subcibe-discount-area form {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.subcibe-discount-area form input {
+    border: none;
+    background-color: transparent;
+}
+
+.subcibe-discount-area form .my-btn {
+    width: 200px;
+    padding: 18px 20px;
+}
+
+.subcibe-discount-area .info {
+    /* max-width: 240px; */
+    margin-top: 12px;
+    color: var(--border-color);
+}
 
 
 
@@ -143,7 +305,11 @@ ________________________________*/
 
 
 
-@media (max-width:769px) {}
+@media (max-width:769px) {
+    .subcibe-discount-area {
+        height: 240px;
+    }
+}
 
 @media (max-width:400px) {
     .hero-area {

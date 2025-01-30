@@ -1077,10 +1077,7 @@ input[type="radio"]:checked::after {
     height: 100%;
 }
 
-.product-cart {
-    /* padding: 12px; */
 
-}
 
 /*****  images  *****/
 .product-cart .images {
