@@ -203,81 +203,11 @@ dropdwonToggle('category-sticky')
 
 
 
+const allCategoryClose = document.getElementById('all-category-close');
+const mobileMenuIcon = document.getElementById('mobile-menu-icon');
 
-
-
-
-
-
-
-// slider
-export function initSlider(sliderClass) {
-    const slider = document.querySelector(`.${sliderClass}`);
-    const slides = slider.querySelector('.slides');
-    const slide = slider.querySelectorAll('.slide');
-    const totalSlides = slide.length;
-    const slideWidth = slide[0].clientWidth;
-    const prevButton = slider.querySelector('.prev');
-    const nextButton = slider.querySelector('.next');
-
-    let currentIndex = 1; // Start on the first "real" slide
-
-    // Set initial position
-    slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-
-    // Update slider position
-    function updateSlider() {
-        slides.style.transition = 'transform 0.5s ease-in-out';
-        slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-    }
-
-    // Handle looping
-    slides.addEventListener('transitionend', () => {
-        if (currentIndex === 0) {
-            slides.style.transition = 'none';
-            currentIndex = totalSlides - 2;
-            slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-        } else if (currentIndex === totalSlides - 1) {
-            slides.style.transition = 'none';
-            currentIndex = 1;
-            slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-        }
-    });
-
-    // Button events
-    prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSlider();
-        }
-    });
-
-    nextButton.addEventListener('click', () => {
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-            updateSlider();
-        }
-    });
-
-    // Auto-slide
-    let autoSlide = setInterval(() => {
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-            updateSlider();
-        }
-    }, 4000);
-
-    // Pause auto-slide on hover
-    slider.addEventListener('mouseover', () => {
-        clearInterval(autoSlide);
-    });
-
-    slider.addEventListener('mouseout', () => {
-        autoSlide = setInterval(() => {
-            if (currentIndex < totalSlides - 1) {
-                currentIndex++;
-                updateSlider();
-            }
-        }, 4000);
-    });
-}
+// Listen for a click event on the 'all-category-close' button
+allCategoryClose.addEventListener('click', function () {
+    // Remove the 'active' class from the mobile menu icon when the category close button is clicked
+    mobileMenuIcon.classList.remove('active');
+});

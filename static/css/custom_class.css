@@ -193,7 +193,7 @@ tr {
 }
 
 .section-margin {
-    margin: 35px 0;
+    margin: 24px 0;
 }
 
 .checkbox {
@@ -1404,6 +1404,10 @@ tr {
 
 /*_______  responsive for tablet divece  ________ */
 @media (max-width:991px) {
+    .my-container {
+        max-width: 680px;
+    }
+
     .my-flex-md-column {
         flex-direction: column;
     }

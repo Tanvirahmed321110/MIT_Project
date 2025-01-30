@@ -4,9 +4,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Smooth Infinite Slider</title>
-        <link rel="stylesheet" href="./static/css/custom_class.css">
+        <title>Owl Carousel Responsive</title>
+
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
         <style>
+            /* General Styles */
             * {
                 margin: 0;
                 padding: 0;
@@ -15,293 +22,142 @@
 
             body {
                 font-family: Arial, sans-serif;
-                height: 100vh;
-                background-color: #f4f4f9;
+                text-align: center;
+                padding: 20px;
+                background-color: #f8f9fa;
             }
 
-            .slider {
+            .slider-container {
+                margin: auto;
                 position: relative;
-                width: 100%;
-                overflow: hidden;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             }
 
-            .slides {
-                display: flex;
-                transition: transform 0.5s ease-in-out;
-            }
-
-            .slide {
-                min-width: 100%;
-                height: 300px;
+            .slider-item {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 2rem;
-                color: white;
+                height: 300px;
+                background-color: #f0f0f0;
+                border-radius: 10px;
+                font-size: 24px;
                 font-weight: bold;
+                color: #333;
+                transition: background-color 0.5s ease-in-out;
             }
 
-            .slide:nth-child(1) {
-                background-color: #ff6b6b;
+            /* Smooth Background Change for Second Active Slide */
+            .slider-one .owl-item.active:nth-child(2) .slider-item {
+                background-color: blueviolet;
+                color: white;
             }
 
-            .slide:nth-child(2) {
-                background-color: #6b83ff;
-            }
-
-            .slide:nth-child(3) {
-                background-color: #6bff83;
-            }
-
-            .slide:nth-child(4) {
-                background-color: #ffe66b;
-            }
-
-            button {
+            /* Navigation Arrows */
+            .owl-prev,
+            .owl-next {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
                 background-color: rgba(0, 0, 0, 0.5);
                 color: white;
-                border: none;
-                width: 50px;
-                height: 50px;
-                cursor: pointer;
+                padding: 10px;
                 border-radius: 50%;
-                z-index: 10;
-            }
-
-            button.prev {
-                left: 10px;
-            }
-
-            button.next {
-                right: 10px;
-            }
-
-            button:hover {
-                background-color: rgba(0, 0, 0, 0.8);
-            }
-
-            @media (max-width: 768px) {
-                .slide {
-                    font-size: 1.5rem;
-                }
-
-                button {
-                    padding: 8px 12px;
-                }
-            }
-
-            .all-category {
-                background-color: #fff;
-                width: 340px;
-                border: 1px solid #dcdbdb;
-            }
-
-            .all-category .plus-minus-btn {
-                padding: 2px;
                 cursor: pointer;
+                font-size: 20px;
             }
 
-            .all-category .item {
-                border-bottom: 1px solid #dcdbdb;
-                font-size: 16px;
-                font-weight: 500;
-                transition: .2s linear;
+            .owl-prev {
+                left: 40px;
             }
 
-            .all-category .item-btn {
-                padding: 10px 14px;
-                cursor: pointer;
+            .owl-next {
+                right: 40px;
             }
 
-            .all-category .item-btn.active {
+            /* Dots Styling */
+            .owl-dots {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .owl-dot {
+                width: 12px;
+                height: 12px;
+                margin: 5px;
+                background-color: #ccc;
+                border-radius: 50%;
+                display: inline-block;
+                transition: 0.3s;
+            }
+
+            .owl-dot.active {
                 background-color: blueviolet;
-            }
-
-            .all-category .item-dropdown {
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s linear;
-            }
-
-            .all-category .item-dropdown.active {
-                max-height: 500px;
-            }
-
-
-            .all-category .item-dropdown .item:last-child,
-            .all-category .item:last-child {
-                border-bottom: none;
-            }
-
-            .all-category .item-dropdown .item {
-                padding-right: 0;
-                margin-left: 12px;
-                padding-left: 0;
-                font-size: 14px;
-            }
-
-            .all-category .item-sub-btn {
-                padding: 8px 12px;
-                padding-left: 24px;
-                font-size: 14px;
-                border-bottom: 1px solid #f3f3f3;
             }
         </style>
     </head>
 
     <body>
 
-        <div class="" style="margin: 45px;">
-            <div class="all-category">
-                <div>
-                    <ul class="my-flex-column my-gap-0 main">
-                        <li class="item ">
-                            <div class="my-flex-between item-btn active">
-                                <div>laptop</div>
-                                <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
-                            </div>
-                            <div class="item-dropdown">
-                                <ul class="">
-                                    <li class=" my-flex-between">
-                                        <div></div>
-                                        <div class="item-dropdown">
-                                            <ul class="">
-                                                <li class="item-sub-btn my-flex-between">
-                                                    <div>2nd dropdown</div>
-                                                    <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
-                                                </li>
-                                                <li class="item-sub-btn my-flex-between">
-                                                    <div>2nd dropdown</div>
-                                                    <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
-                                                </li>
-                                                <li class="item-sub-btn my-flex-between">
-                                                    <div>2nd dropdown</div>
-                                                    <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="item-sub-btn my-flex-between">
-                                        <div>2nd dropdown</div>
-                                        <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
-                                    </li>
-                                    <li class="item-sub-btn my-flex-between">
-                                        <div>2nd dropdown</div>
-                                        <span class="plus-minus-btn"><i class="fa-solid fa-plus"></i></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+        <h2>Owl Carousel Responsive</h2>
 
-                        <!-- More list items can be added here -->
+        <div class="area">
+            <div class="category">
+                <div class="item">itemon3</div>
+            </div>
 
-                    </ul>
+            <div class="slider-container">
+                <div class="owl-carousel slider-one">
+                    <div class="slider-item">
+                        <h3>Slider 1</h3>
+                    </div>
+                    <div class="slider-item">
+                        <h3>Slider 2</h3>
+                    </div>
+                    <div class="slider-item">
+                        <h3>Slider 3</h3>
+                    </div>
+                    <div class="slider-item">
+                        <h3>Slider 4</h3>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="slider">
-            <div class="slides">
-                <div class="slide">Slide 4</div> <!-- Clone of the last slide -->
-                <div class="slide">Slide 1</div>
-                <div class="slide">Slide 2</div>
-                <div class="slide">Slide 3</div>
-                <div class="slide">Slide 4</div>
-                <div class="slide">Slide 1</div> <!-- Clone of the first slide -->
-            </div>
-            <button class="prev">&larr;</button>
-            <button class="next">&rarr;</button>
-        </div>
+        <!-- jQuery (Required) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Owl Carousel JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
         <script>
-            const itemButtons = document.querySelectorAll('.item-btn');
-            itemButtons.forEach(btn => {
-                btn.addEventListener("click", function (e) {
-                    e.stopPropagation();
-
-                    itemButtons.forEach(single => {
-                        single.classList.remove('active')
-                    })
-                    btn.classList.toggle('active')
-
-                    let item = this.closest(".item");
-                    let dropdown = item.querySelector(".item-dropdown");
-                    let icon = btn.querySelector('.plus-minus-btn i');
-
-                    icon.classList.toggle('fa-plus');
-                    icon.classList.toggle('fa-minus');
-
-                    dropdown.classList.toggle('active');
-
-                    if (dropdown.classList.contains('active')) {
-                        dropdown.style.maxHeight = dropdown.scrollHeight + "px";
-                    } else {
-                        dropdown.style.maxHeight = "0";
-                    }
-
-                    itemButtons.forEach(single => {
-                        if (single !== btn) {
-                            let otherItem = single.closest('.item');
-                            let otherDropdown = otherItem.querySelector('.item-dropdown');
-                            let otherIcon = single.querySelector('.plus-minus-btn i');
-
-                            otherIcon.classList.remove('fa-minus');
-                            otherIcon.classList.add('fa-plus');
-
-                            if (otherDropdown) {
-                                otherDropdown.classList.remove('active');
-                                otherDropdown.style.maxHeight = "0";
-                            }
+            $(document).ready(function () {
+                $(".slider-one").owlCarousel({
+                    items: 1,  // Default: 1 item per view
+                    loop: true,
+                    margin: 10,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    autoplayHoverPause: true,
+                    nav: true,
+                    dots: true,
+                    responsive: {
+                        0: {
+                            items: 1  // 1 slide on mobile
+                        },
+                        600: {
+                            items: 1  // 2 slides on tablets
+                        },
+                        1000: {
+                            items: 1  // 3 slides on desktops
                         }
-                    });
+                    },
+                    onChanged: function (event) {
+                        $(".slider-item").css("background-color", ""); // Reset all
+                        $(".owl-item.active .slider-item").eq(1).css("background-color", "blueviolet"); // Change second active item
+                    }
                 });
             });
-
-            const slides = document.querySelector('.slides');
-            const slide = document.querySelectorAll('.slide');
-            const totalSlides = slide.length;
-            const slideWidth = slide[0].clientWidth;
-
-            let currentIndex = 1;
-
-            slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-
-            function updateSlider() {
-                slides.style.transition = 'transform 0.5s ease-in-out';
-                slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-            }
-
-            slides.addEventListener('transitionend', () => {
-                if (currentIndex === 0) {
-                    slides.style.transition = 'none';
-                    currentIndex = totalSlides - 2;
-                    slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-                } else if (currentIndex === totalSlides - 1) {
-                    slides.style.transition = 'none';
-                    currentIndex = 1;
-                    slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-                }
-            });
-
-            document.querySelector('.next').addEventListener('click', () => {
-                if (currentIndex < totalSlides - 1) {
-                    currentIndex++;
-                    updateSlider();
-                }
-            });
-
-            document.querySelector('.prev').addEventListener('click', () => {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateSlider();
-                }
-            });
         </script>
+
     </body>
 
 </html>
