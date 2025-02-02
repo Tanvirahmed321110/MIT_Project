@@ -375,6 +375,75 @@ _______________________________*/
 
 
 
+
+
+
+
+
+
+
+/*______________________________
+  ||     Footer Start Here     ||
+_______________________________*/
+footer {
+    background-color: var(--secondary-color);
+    padding: 34px;
+    padding-bottom: 0px;
+    color: var(--border-color2);
+}
+
+footer p,
+footer a {
+    color: var(--border-color2);
+    opacity: .8;
+}
+
+.footer-title {
+    position: relative;
+    color: var(--border-color);
+    font-size: var(--fs-xl);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    height: 2px;
+    width: 120px;
+    background-color: var(--white);
+}
+
+
+footer .pages i {
+    font-size: var(--fs-xs);
+    transition: .2s linear;
+}
+
+footer .pages a:hover {
+    opacity: unset;
+}
+
+footer .pages a:hover i {
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    border-color: var(--gray);
+}
+
+.footer-bottom ul a {
+    font-size: 13px;
+}
+
+.footer-bottom ul a:hover {
+    color: var(--orange);
+}
+
+
+
 /*________________________________________
   ||     Responsive 1080px Start Here     ||
 _________________________________________*/
@@ -534,5 +603,9 @@ _________________________________________*/
         border-bottom: 1px solid var(--border-color);
         padding: 6px;
         font-size: 14px !important
+    }
+
+    footer {
+        padding: 30px 10px;
     }
 }

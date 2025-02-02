@@ -82,7 +82,7 @@ ________________________________*/
     position: relative;
     border-radius: 10px;
     height: 350px;
-    background-color: rgb(173, 170, 170);
+    background-color: rgb(205, 203, 203);
 }
 
 
@@ -371,10 +371,19 @@ ____________________________________*/
         align-items: flex-start;
         justify-content: center;
     }
+
+    .testimonial .testimonial-item {
+        max-width: 400px;
+        margin: 0 auto;
+    }
 }
 
-@media (max-width:400px) {
+@media (max-width:480px) {
     .hero-area {
         width: 100%;
+    }
+
+    .achivment .items {
+        grid-template-columns: 1fr;
     }
 }
