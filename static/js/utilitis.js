@@ -1,26 +1,32 @@
 // Open Modal Function
-export function openModalF(modalId, btnId) {
+export function openModalF(modalId, btnSelector) {
     const modal = document.getElementById(modalId)
-    const btn = document.getElementById(btnId)
-
-    btn.addEventListener('click', function () {
-        modal.classList.add('active')
-    })
-}
+    const btns = document.querySelectorAll(btnSelector)
 
 
-
-// Close Modal Function
-export function closeButtonF(modalId) {
-    const closeButtons = document.querySelectorAll('.close-btn-right')
-    const modal = document.getElementById(modalId)
-
-    closeButtons.forEach(btn => {
+    btns.forEach(btn => {
         btn.addEventListener('click', function () {
-            modal.classList.remove('active')
+            modal.classList.add('active')
         })
     })
 }
+
+
+// close button funciton
+export function closeButtonF() {
+    const closeButtons = document.querySelectorAll('.modal-close-btn');
+
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const modal = btn.closest('.my-modal, .all-category'); // Selects the closest matching element
+
+            if (modal) { // Check if a matching ancestor exists
+                modal.classList.remove('active');
+            }
+        });
+    });
+}
+
 
 
 // Sidebar toggle function
