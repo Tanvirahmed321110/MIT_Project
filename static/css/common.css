@@ -139,7 +139,7 @@ _______________________________*/
     min-width: 300px;
     width: 100%;
     overflow: auto;
-    min-height: 480px;
+    min-height: 445px;
 }
 
 .all-department.my-card {
@@ -172,8 +172,7 @@ _______________________________*/
 
 .hero-area .all-department .single-dept {
     cursor: pointer;
-    padding: 4px 0;
-    padding: 6px 16px;
+    padding: 4px 16px;
     border-radius: 2px;
 }
 
@@ -688,6 +687,7 @@ _________________________________________*/
         left: 0;
         width: 100%;
         height: 64px;
+        border-top: 1px solid var(--border-color2);
     }
 
     .mobile-header-bottom .my-container {

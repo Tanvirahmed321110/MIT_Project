@@ -947,32 +947,28 @@
                         <!--_________________  Banner Here  ________________  -->
                         <div class="banner">
 
-                            <div class="slider-banner">
-                                <div class="slider-item my-flex-center my-h-100">
-                                    <a href="#" class="my-d-block my-h-100">
-                                        <img class="my-h-100"
-                                            src="https://img.lazcdn.com/us/domino/3c5079d8-fe60-454d-a533-7ebd3782014b_BD-1976-688.jpg_2200x2200q80.jpg"
-                                            alt="">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Offer Area -->
-                            <div class="special-offer my-grid-2 my-grid-md-1 my-gap-3 my-mt-3">
-                                <div class="item">
-                                    <div class="content">
-                                        <h4>OFFER 20%</h4>
-                                        <p>
-                                            We at Star Tech love gaming. Therefore, we aim to provide a holistic gaming
-                                        </p>
+                            <div class="slider-banner swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide my-flex-center my-h-100">
+                                        <a href="#" class="my-d-block my-h-100">
+                                            <img class="my-h-100"
+                                                src="https://www.startech.com.bd/image/cache/catalog/home/offer-banner-982x500.webp"
+                                                alt="">
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <h4>OFFER 24%</h4>
-                                        <p>
-                                            We at Star Tech love gaming. Therefore, we aim to provide a holistic gaming
-                                        </p>
+                                    <div class="swiper-slide my-flex-center my-h-100">
+                                        <a href="#" class="my-d-block my-h-100">
+                                            <img class="my-h-100"
+                                                src="https://www.startech.com.bd/image/cache/catalog/home/offer-banner-982x500.webp"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide my-flex-center my-h-100">
+                                        <a href="#" class="my-d-block my-h-100">
+                                            <img class="my-h-100"
+                                                src="https://www.startech.com.bd/image/cache/catalog/home/offer-banner-982x500.webp"
+                                                alt="">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -993,11 +989,61 @@
 
 
 
+
+
+
+            <!-- =============================================== -->
+            <!-- ==========     Offer Section Start     ======== -->
+            <!-- =============================================== -->
+            <section class="offer-section">
+                <div class="my-container">
+                    <!-- Offer Area -->
+                    <div class="special-offer my-grid-3 my-grid-md-1 my-gap-3 my-mt-0">
+                        <div class="item">
+                            <div class="content">
+                                <h4>OFFER 20%</h4>
+                                <p>
+                                    We at Star Tech love gaming. Therefore, we aim to provide a holistic gaming
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <h4>OFFER 24%</h4>
+                                <p>
+                                    We at Star Tech love gaming. Therefore, we aim to provide a holistic gaming
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <h4>OFFER 24%</h4>
+                                <p>
+                                    We at Star Tech love gaming. Therefore, we aim to provide a holistic gaming
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ============================================= -->
+            <!-- ==========     Offer Section End     ======== -->
+            <!-- ============================================= -->
+
+
+
+
+
+
+
+
+
+
             <!-- ============================================== -->
-            <!-- ==========     Hero Section Start     ======== -->
+            <!-- ==========     Marquee Section Start     ======== -->
             <!-- ============================================== -->
             <section>
-                <div class="my-container">
+                <div class="my-container ">
                     <div class="marque-text my-bg-white my-radius-pill">
                         <marquee behavior="" class="my-p-3 my-mx-4" direction="">02, January, Tuesday, all outlets are
                             open
@@ -1020,8 +1066,8 @@
             <!-- ================================================ -->
             <!-- ==========     Feature Section Start     ======== -->
             <!-- ================================================= -->
-            <section class="section-margin">
-                <div class="my-container">
+            <section class="section-margin feature">
+                <div class="my-container ">
                     <div class="feature-category">
                         <div class="section-head">
                             <h3>Feature Category</h3>
@@ -1167,9 +1213,9 @@
 
 
 
-            <!-- ========================================================= -->
-            <!-- ==========     Feature Product Section Start     ======== -->
-            <!-- ========================================================= -->
+            <!-- ========================================================== -->
+            <!-- ==========     Feature Products Section Start     ======== -->
+            <!-- ========================================================== -->
 
             <section class="section-margin">
                 <div class="my-container">
@@ -3350,7 +3396,9 @@
 
         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
         <script type="module">
-            import { openModalF, closeButtonF, updateQuantity, openSearchDropdown, deleteF, toggleF, activeF } from './static/js/utilitis.js';
+            import {
+                openModalF, closeButtonF, updateQuantity, openSearchDropdown, deleteF, toggleF, activeF,
+            } from './static/js/utilitis.js';
 
             closeButtonF()
 
@@ -3389,6 +3437,28 @@
             });
 
 
+            document.addEventListener("DOMContentLoaded", function () {
+                new Swiper(".slider-banner", {
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
+            });
+
+
+
+
+
 
             // Toggle category dropdowns and icon
             document.querySelectorAll('.open-btn').forEach(button => {
@@ -3421,6 +3491,8 @@
                     }
                 });
             });
+
+
 
             // Toggle subcategory dropdowns and icon
             document.querySelectorAll('.subcategory-btn').forEach(subcategory => {

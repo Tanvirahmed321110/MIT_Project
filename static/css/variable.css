@@ -9,13 +9,15 @@
     /*______  Color  ______ */
     --primary-color: #016bf8;
     --primary-hover-color: #4385dc;
-    --secondary-color: #01293a;
+    /* --secondary-color: #01293a; */
+    --secondary-color: #141d39;
     --orange: #ffc107;
     --green: #0aad0a;
     --gray: #707070;
     --gray2: #a39e9ec3;
     --dark: #1b2023;
-    --secondary-hover: #193b4a;
+    /* --secondary-hover: #193b4a; */
+    --secondary-hover: #142d38;
     --white: #fff;
     --white-off: #F0F3F2;
     --border-color: #ededed;

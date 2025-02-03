@@ -6,6 +6,10 @@ ________________________________*/
     padding: 22px;
 }
 
+.feature .my-container {
+    padding-top: 0;
+}
+
 .feature-category-area .item {
     width: 130px;
     height: 130px;
@@ -36,9 +40,8 @@ ________________________________*/
 
 /*___________________    Hero Category ___________________  */
 .hero-area {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 28px;
+    display: flex;
+    gap: 2%;
 }
 
 .hero-area .all-department-btn {
@@ -81,13 +84,50 @@ ________________________________*/
     margin: auto;
     position: relative;
     border-radius: 10px;
-    height: 350px;
+    height: 500px;
     background-color: rgb(205, 203, 203);
 }
 
 
 
+.banner {
+    display: flex;
+    width: 72%;
+    height: 490px;
+}
 
+.hero-area .category {
+    width: 26%;
+}
+
+.category-content {
+    width: 40%;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.category-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category-content ul li {
+    padding: 10px;
+    background: white;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slider-banner {
+    width: 100%;
+    height: 495px;
+}
 
 
 
@@ -108,6 +148,10 @@ ________________________________*/
 }
 
 
+
+.offer-section .my-container {
+    padding-top: 0;
+}
 
 
 
@@ -334,7 +378,12 @@ ____________________________________*/
 
 
     .hero-area {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .hero-area .banner {
+        width: 100%;
+        height: 328px;
     }
 
     .hero .my-container {

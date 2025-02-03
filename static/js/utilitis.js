@@ -62,6 +62,24 @@ export function toggleF(sidebarId, buttonId) {
 
 
 
+// update qty
+function updateQty() {
+    const inputQuantity = document.getElementById('input-quantity')
+
+    if (inputQuantity) {
+        document.getElementById('plus-btn').addEventListener('click', function () {
+            updateQuantity(inputQuantity, 'increment')
+            console.log('click')
+        })
+        document.getElementById('minus-btn').addEventListener('click', function () {
+            updateQuantity(inputQuantity, 'decrement')
+        })
+    }
+}
+updateQty()
+
+
+
 
 
 // Base function for updating quantity
@@ -75,6 +93,36 @@ export function updateQuantity(inputField, operation) {
         inputField.value = currentValue - 1;
     }
 }
+
+
+
+
+// setup quantity
+function setupQuantityButtons() {
+    const allCartItems = document.querySelectorAll('.shopping-cart-modal .item');
+
+    allCartItems.forEach((item) => {
+        const plusButton = item.querySelector('.plus-btn');
+        const minusButton = item.querySelector('.minus-btn');
+        const inputField = item.querySelector('.input-field');
+
+        // Add event listener for the plus button
+        plusButton.addEventListener('click', function () {
+            updateQuantity(inputField, 'increment');
+        });
+
+        // Add event listener for the minus button
+        minusButton.addEventListener('click', function () {
+            updateQuantity(inputField, 'decrement');
+        });
+    });
+
+}
+
+// Call setupQuantityButtons
+setupQuantityButtons();
+
+
 
 
 // Search Dropdown
@@ -121,6 +169,8 @@ export function openSearchDropdown() {
 
 
 
+
+// delete function
 export function deleteF(itemClass, btnsClass) {
     const items = document.querySelectorAll(itemClass)
     const btns = document.querySelectorAll(btnsClass)
@@ -144,6 +194,7 @@ export function deleteF(itemClass, btnsClass) {
     })
 }
 
+deleteF('.shopping-cart-modal .item', '.shopping-cart-modal .delete-btn')
 
 
 

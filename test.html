@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Swiper Banner with Categories</title>
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            .banner {
+                display: flex;
+                width: 100%;
+                height: 500px;
+                background-color: gainsboro;
+            }
+
+            .category-content {
+                width: 40%;
+                background: #f4f4f4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .category-content ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .category-content ul li {
+                padding: 10px;
+                background: white;
+                margin-bottom: 10px;
+                text-align: center;
+                cursor: pointer;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .slider-banner {
+                width: 60%;
+            }
+
+            .swiper-slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                color: white;
+            }
+
+            .swiper-pagination {
+                bottom: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="banner">
+            <!-- Category Section (40%) -->
+            <div class="category-content">
+                <ul>
+                    <li>Category 1</li>
+                    <li>Category 2</li>
+                    <li>Category 3</li>
+                    <li>Category 4</li>
+                </ul>
+            </div>
+
+            <!-- Swiper Slider (60%) -->
+            <div class="slider-banner swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="banner1.jpg" alt="Banner 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="banner2.jpg" alt="Banner 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="banner3.jpg" alt="Banner 3">
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                new Swiper(".slider-banner", {
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
+            });
+        </script>
+
+    </body>
+
+</html>
