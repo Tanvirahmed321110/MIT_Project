@@ -223,6 +223,14 @@ tr {
     margin-right: auto;
 }
 
+.my-text-underline {
+    text-decoration: underline;
+}
+
+.text-hover:hover {
+    color: var(--green);
+}
+
 /* Border */
 .my-border {
     border: 1px solid var(--border-color);
@@ -1403,7 +1411,9 @@ tr {
 
 /*_______  responsive for tablet divece  ________ */
 @media (max-width:991px) {
-    .my-container {
+
+    .my-container,
+    .my-container-sm {
         max-width: 680px;
     }
 

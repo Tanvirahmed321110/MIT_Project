@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home_Page</title>
+        <title>Wish_Page</title>
 
         <!--  common css -->
         <link rel="stylesheet" href="../static/css/common.css">
@@ -672,8 +672,8 @@
                                     <p class="my-text-white-off">Account</p>
                                     <div class="my-text-white-off my-fs-xs">
                                         <div class="my-d-flex my-align-center my-gap-1">
-                                            <button class="hover-underline">login</button> /
-                                            <button class="hover-underline">register</button>
+                                            <a href="./login.html" class="hover-underline">login</a> /
+                                            <a href="./register.html" class="hover-underline">register</a>
                                         </div>
                                     </div>
                                 </div>
@@ -730,7 +730,7 @@
                 <div class="my-container my-pb-0">
                     <ul class="my-d-flex my-mt-2 my-align-center my-gap-5   brigtcamp-area contact-page">
                         <li><a href="../index.html">Home</a> </li>
-                        <li>Cart</li>
+                        <li>Wishlist</li>
                     </ul>
                 </div>
             </section>
@@ -743,149 +743,151 @@
 
 
             <!-- ================================================== -->
-            <!-- ==========    Cart Section  Start  Here   ======== -->
+            <!-- ==========    Wishlist Section  Start  Here ====== -->
             <!-- ================================================== -->
-            <section class="cart-section">
+            <section>
                 <div class="my-container">
-                    <div class="area">
-                        <div class="left  my-bg-white my-p-4">
-                            <p>
-                                You have (12) items in your cart.
-                            </p>
-                            <ul class="my-mt-5 products-area-table my-has-scrollbar">
+                    <div class="wishlist-area">
+                        <div class="section-head">
+                            <h3>My Wishlist</h3>
+                            <p>8 products </p>
+                        </div>
+
+
+                        <!-- Wishlist Table -->
+                        <div class="my-bg-white my-p-4 my-mt-4">
+                            <ul class="my-mt-4  products-area-table  my-has-scrollbar">
 
                                 <!-- Singe cart item -->
                                 <li class="my-d-flex my-gap-4 my-border-bottom my-flex-between my-px-5 my-py-3">
-                                    <div>
+                                    <div class="my-d-flex my-align-center my-gap-4 col">
                                         <img class="w-15 my-border" src="../static/images/product-img4.webp" alt="">
+                                        <h5>New gaming pc</h5>
                                     </div>
 
                                     <!-- info -->
-                                    <div class="my-flex-column details my-gap-0">
-                                        <h5>New gaming pc</h5>
-                                        <p class="my-mt-0 "><i class="fa-solid fa-bangladeshi-taka-sign">
-                                                17000</i></p>
-                                        <div class="my-fs-sm my-mt-2">discount- <span>100</span></div>
+                                    <div class="my-flex-column details my-gap-0 col">
+                                        <h5 class="my-mt-0 "><i class="fa-solid fa-bangladeshi-taka-sign">
+                                            </i>17000</h5>
+                                        <del class="my-fs-sm my-mt-1 my-text-gray"> <i
+                                                class="fa-solid fa-bangladeshi-taka-sign">
+                                            </i><span>21100</span></del>
                                     </div>
 
                                     <!-- quantity buttons -->
-                                    <div class="quantity-buttons-area">
-                                        <div class="my-d-flex quantity-buttons">
-                                            <input type="button" value="-" class="minus-btn">
-                                            <input type="number" step="1" max="10" class="input-field" value="1">
-                                            <input type="button" value="+" class="plus-btn">
-                                        </div>
+                                    <div class="col">
+                                        <div class="instock tag">in stock</div>
                                     </div>
 
                                     <!-- Price -->
-                                    <h5>16980</h5>
+                                    <h5 class="col">16980</h5>
 
-                                    <!-- delete button -->
-                                    <button class="my-fs-md delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+                                    <div class="my-d-flex my-gap-2 my-align-center col">
+                                        <button class="my-btn my-primary-btn my-btn-sm">Add To Cart</button>
+                                        <button class="my-btn my-secendary-btn my-btn-sm">Buy Now</button>
+                                    </div>
+
+                                    <div>
+                                        <!-- delete button -->
+                                        <button class="col my-fs-md delete-btn"><i
+                                                class="fa-solid fa-trash-can"></i></button>
+                                    </div>
                                 </li>
-
                                 <!-- Singe cart item -->
                                 <li class="my-d-flex my-gap-4 my-border-bottom my-flex-between my-px-5 my-py-3">
-                                    <div>
-                                        <img class="w-15 my-border" src="../static/images/product-img3.webp" alt="">
-
+                                    <div class="my-d-flex my-align-center my-gap-4 col">
+                                        <img class="w-15 my-border" src="../static/images/product-img4.webp" alt="">
+                                        <h5>New gaming pc</h5>
                                     </div>
 
                                     <!-- info -->
-                                    <div class=" my-flex-column details my-gap-0">
-                                        <h5>New gaming pc</h5>
-                                        <p class="my-mt-0"><i class="fa-solid fa-bangladeshi-taka-sign"> 22400</i></p>
-                                        <div class="my-fs-sm my-mt-2">discount- <span>250</span></div>
+                                    <div class="my-flex-column details my-gap-0 col">
+                                        <h5 class="my-mt-0 "><i class="fa-solid fa-bangladeshi-taka-sign">
+                                            </i>17000</h5>
+                                        <del class="my-fs-sm my-mt-1 my-text-gray"> <i
+                                                class="fa-solid fa-bangladeshi-taka-sign">
+                                            </i><span>21100</span></del>
                                     </div>
 
                                     <!-- quantity buttons -->
-                                    <div>
-                                        <div class="my-d-flex quantity-buttons">
-                                            <input type="button" value="-" class="minus-btn">
-                                            <input type="number" step="1" max="10" class="input-field" value="1">
-                                            <input type="button" value="+" class="plus-btn">
-                                        </div>
+                                    <div class="col">
+                                        <div class="instock tag">in stock</div>
                                     </div>
 
                                     <!-- Price -->
-                                    <h5>19500</h5>
+                                    <h5 class="col">16980</h5>
 
-                                    <!-- delete button -->
-                                    <button class="my-fs-md delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+                                    <div class="my-d-flex my-gap-2 my-align-center col">
+                                        <button class="my-btn my-primary-btn my-btn-sm">Add To Cart</button>
+                                        <button class="my-btn my-secendary-btn my-btn-sm">Buy Now</button>
+                                    </div>
+
+                                    <div>
+                                        <!-- delete button -->
+                                        <button class="col my-fs-md delete-btn"><i
+                                                class="fa-solid fa-trash-can"></i></button>
+                                    </div>
                                 </li>
-
                                 <!-- Singe cart item -->
                                 <li class="my-d-flex my-gap-4 my-border-bottom my-flex-between my-px-5 my-py-3">
-                                    <div>
-                                        <img class="w-15 my-border"
-                                            src="../static/images/safeway-veloce-pro-mtg-1925-mid-tower-black-atx-11655983223.webp"
-                                            alt="">
-
+                                    <div class="my-d-flex my-align-center my-gap-4 col">
+                                        <img class="w-15 my-border" src="../static/images/product-img4.webp" alt="">
+                                        <h5>New gaming pc</h5>
                                     </div>
 
                                     <!-- info -->
-                                    <div class="my-flex-column details my-gap-0">
-                                        <h5>New gaming pc</h5>
-                                        <p class="my-mt-0"><i class="fa-solid fa-bangladeshi-taka-sign"> 22400</i></p>
-                                        <div class="my-fs-sm my-mt-2">discount- <span>250</span></div>
+                                    <div class="my-flex-column details my-gap-0 col">
+                                        <h5 class="my-mt-0 "><i class="fa-solid fa-bangladeshi-taka-sign">
+                                            </i>17000</h5>
+                                        <del class="my-fs-sm my-mt-1 my-text-gray"> <i
+                                                class="fa-solid fa-bangladeshi-taka-sign">
+                                            </i><span>21100</span></del>
                                     </div>
 
                                     <!-- quantity buttons -->
-                                    <div>
-                                        <div class="my-d-flex quantity-buttons">
-                                            <input type="button" value="-" class="minus-btn">
-                                            <input type="number" step="1" max="10" class="input-field" value="1">
-                                            <input type="button" value="+" class="plus-btn">
-                                        </div>
+                                    <div class="col">
+                                        <div class="instock tag">in stock</div>
                                     </div>
 
                                     <!-- Price -->
-                                    <h5>22000</h5>
+                                    <h5 class="col">16980</h5>
 
-                                    <!-- delete button -->
-                                    <button class="my-fs-md delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+                                    <div class="my-d-flex my-gap-2 my-align-center col">
+                                        <button class="my-btn my-primary-btn my-btn-sm">Add To Cart</button>
+                                        <button class="my-btn my-secendary-btn my-btn-sm">Buy Now</button>
+                                    </div>
+
+                                    <div>
+                                        <!-- delete button -->
+                                        <button class="col my-fs-md delete-btn"><i
+                                                class="fa-solid fa-trash-can"></i></button>
+                                    </div>
                                 </li>
+
                             </ul>
                         </div>
-                        <div class="right">
-                            <div class="my-bg-white my-p-4">
-                                <h4 class="">Price Detials</h4>
-                                <div>
-                                    <ul class="my-mt-4 my-flex-column my-gap-3">
-                                        <li class="my-flex-between">
-                                            <div>Subtotal</div>
-                                            <div><i class="fa-solid fa-bangladeshi-taka-sign"></i> 22000</div>
-                                        </li>
-                                        <li class="my-flex-between">
-                                            <div>Discount</div>
-                                            <div><i class="fa-solid fa-bangladeshi-taka-sign"></i> 00</div>
-                                        </li>
-                                        <li class="my-flex-between">
-                                            <div>Shipping</div>
-                                            <div><i class="fa-solid fa-bangladeshi-taka-sign"></i> 00</div>
-                                        </li>
-                                        <li class="my-flex-between">
-                                            <div>Tax</div>
-                                            <div><i class="fa-solid fa-bangladeshi-taka-sign"></i> 00</div>
-                                        </li>
-                                        <li class="my-flex-between my-border-top my-pt-2">
-                                            <h4>Total</h4>
-                                            <h4><i class="fa-solid fa-bangladeshi-taka-sign"></i> 22000</h4>
-                                        </li>
-                                    </ul>
-                                </div>
 
-                                <div class="my-flex-column my-gap-2 my-mt-8">
-                                    <a class="my-btn my-primary-btn" href="../index.html">Continue Shopping</a>
-                                    <a class="my-btn my-secendary-btn" href="../pages/checkout.html">Checkout</a>
-                                </div>
-                            </div>
+
+
+                        <!-- Pagination -->
+                        <div class="pagination my-mt-5">
+                            <ul class="my-d-flex my-align-center my-gap-1 my-justify-end">
+                                <li>
+                                    <a class="disable" href="#"> <i class="fa-solid fa-chevron-left"></i>
+                                        Previous</a>
+                                </li>
+                                <li class="active"><a class="" href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">Next <i class="fa-solid fa-chevron-right"></i> </a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- ================================================ -->
-            <!-- ==========    Cart Section  End  Here   ======== -->
+            <!-- ==========    Wishlist Section  End  Here ====== -->
             <!-- ================================================ -->
         </main>
 

@@ -281,6 +281,10 @@ ________________________________*/
     width: 26%;
 }
 
+.hero-area .swiper-slide a {
+    transform: unset;
+}
+
 .category-content {
     width: 40%;
     background: #f4f4f4;

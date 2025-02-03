@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home_Page</title>
+        <title>Forgot_Page</title>
 
         <!--  common css -->
         <link rel="stylesheet" href="../static/css/common.css">
@@ -730,7 +730,8 @@
                 <div class="my-container my-pb-0">
                     <ul class="my-d-flex my-mt-2 my-align-center my-gap-5   brigtcamp-area contact-page">
                         <li><a href="../index.html">Home</a> </li>
-                        <li>Cart</li>
+                        <li><a href="../index.html">Account</a></li>
+                        <li>Forgot password</li>
                     </ul>
                 </div>
             </section>
@@ -743,141 +744,35 @@
 
 
             <!-- ================================================== -->
-            <!-- ==========    Cart Section  Start  Here   ======== -->
+            <!-- ==========    login Section  Start  Here   ======== -->
             <!-- ================================================== -->
-            <section class="cart-section">
-                <div class="my-container">
-                    <div class="area">
-                        <div class="left  my-bg-white my-p-4">
-                            <p>
-                                You have (12) items in your cart.
-                            </p>
-                            <ul class="my-mt-5 products-area-table my-has-scrollbar">
+            <section>
+                <div class="login-other">
+                    <div class="my-container-sm">
+                        <div class="login-area my-grid-2 my-justify-center my-grid-md-1">
 
-                                <!-- Singe cart item -->
-                                <li class="my-d-flex my-gap-4 my-border-bottom my-flex-between my-px-5 my-py-3">
-                                    <div>
-                                        <img class="w-15 my-border" src="../static/images/product-img4.webp" alt="">
-                                    </div>
+                            <!-- Left image -->
+                            <div class="left my-text-center">
+                                <img src="../static/images/forgot.png" alt="">
+                            </div>
 
-                                    <!-- info -->
-                                    <div class="my-flex-column details my-gap-0">
-                                        <h5>New gaming pc</h5>
-                                        <p class="my-mt-0 "><i class="fa-solid fa-bangladeshi-taka-sign">
-                                                17000</i></p>
-                                        <div class="my-fs-sm my-mt-2">discount- <span>100</span></div>
-                                    </div>
 
-                                    <!-- quantity buttons -->
-                                    <div class="quantity-buttons-area">
-                                        <div class="my-d-flex quantity-buttons">
-                                            <input type="button" value="-" class="minus-btn">
-                                            <input type="number" step="1" max="10" class="input-field" value="1">
-                                            <input type="button" value="+" class="plus-btn">
+                            <!-- Right -->
+                            <div class="right">
+                                <div class="my-card">
+                                    <h2 class="my-text-center">Loss Password</h2>
+
+                                    <form action="#" class="my-mt-6 my-flex-column my-gap-4">
+                                        <div class="my-input-control">
+                                            <input type="email" placeholder="email">
                                         </div>
+                                        <button class="my-btn my-mt-2 my-secendary-btn">Reset Now</button>
+                                    </form>
+
+                                    <div class="my-mt-5">
+                                        <a class="my-btn my-btn-outline" href="../index.html">Back To Home</a>
                                     </div>
 
-                                    <!-- Price -->
-                                    <h5>16980</h5>
-
-                                    <!-- delete button -->
-                                    <button class="my-fs-md delete-btn"><i class="fa-solid fa-trash-can"></i></button>
-                                </li>
-
-                                <!-- Singe cart item -->
-                                <li class="my-d-flex my-gap-4 my-border-bottom my-flex-between my-px-5 my-py-3">
-                                    <div>
-                                        <img class="w-15 my-border" src="../static/images/product-img3.webp" alt="">
-
-                                    </div>
-
-                                    <!-- info -->
-                                    <div class=" my-flex-column details my-gap-0">
-                                        <h5>New gaming pc</h5>
-                                        <p class="my-mt-0"><i class="fa-solid fa-bangladeshi-taka-sign"> 22400</i></p>
-                                        <div class="my-fs-sm my-mt-2">discount- <span>250</span></div>
-                                    </div>
-
-                                    <!-- quantity buttons -->
-                                    <div>
-                                        <div class="my-d-flex quantity-buttons">
-                                            <input type="button" value="-" class="minus-btn">
-                                            <input type="number" step="1" max="10" class="input-field" value="1">
-                                            <input type="button" value="+" class="plus-btn">
-                                        </div>
-                                    </div>
-
-                                    <!-- Price -->
-                                    <h5>19500</h5>
-
-                                    <!-- delete button -->
-                                    <button class="my-fs-md delete-btn"><i class="fa-solid fa-trash-can"></i></button>
-                                </li>
-
-                                <!-- Singe cart item -->
-                                <li class="my-d-flex my-gap-4 my-border-bottom my-flex-between my-px-5 my-py-3">
-                                    <div>
-                                        <img class="w-15 my-border"
-                                            src="../static/images/safeway-veloce-pro-mtg-1925-mid-tower-black-atx-11655983223.webp"
-                                            alt="">
-
-                                    </div>
-
-                                    <!-- info -->
-                                    <div class="my-flex-column details my-gap-0">
-                                        <h5>New gaming pc</h5>
-                                        <p class="my-mt-0"><i class="fa-solid fa-bangladeshi-taka-sign"> 22400</i></p>
-                                        <div class="my-fs-sm my-mt-2">discount- <span>250</span></div>
-                                    </div>
-
-                                    <!-- quantity buttons -->
-                                    <div>
-                                        <div class="my-d-flex quantity-buttons">
-                                            <input type="button" value="-" class="minus-btn">
-                                            <input type="number" step="1" max="10" class="input-field" value="1">
-                                            <input type="button" value="+" class="plus-btn">
-                                        </div>
-                                    </div>
-
-                                    <!-- Price -->
-                                    <h5>22000</h5>
-
-                                    <!-- delete button -->
-                                    <button class="my-fs-md delete-btn"><i class="fa-solid fa-trash-can"></i></button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="right">
-                            <div class="my-bg-white my-p-4">
-                                <h4 class="">Price Detials</h4>
-                                <div>
-                                    <ul class="my-mt-4 my-flex-column my-gap-3">
-                                        <li class="my-flex-between">
-                                            <div>Subtotal</div>
-                                            <div><i class="fa-solid fa-bangladeshi-taka-sign"></i> 22000</div>
-                                        </li>
-                                        <li class="my-flex-between">
-                                            <div>Discount</div>
-                                            <div><i class="fa-solid fa-bangladeshi-taka-sign"></i> 00</div>
-                                        </li>
-                                        <li class="my-flex-between">
-                                            <div>Shipping</div>
-                                            <div><i class="fa-solid fa-bangladeshi-taka-sign"></i> 00</div>
-                                        </li>
-                                        <li class="my-flex-between">
-                                            <div>Tax</div>
-                                            <div><i class="fa-solid fa-bangladeshi-taka-sign"></i> 00</div>
-                                        </li>
-                                        <li class="my-flex-between my-border-top my-pt-2">
-                                            <h4>Total</h4>
-                                            <h4><i class="fa-solid fa-bangladeshi-taka-sign"></i> 22000</h4>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="my-flex-column my-gap-2 my-mt-8">
-                                    <a class="my-btn my-primary-btn" href="../index.html">Continue Shopping</a>
-                                    <a class="my-btn my-secendary-btn" href="../pages/checkout.html">Checkout</a>
                                 </div>
                             </div>
                         </div>
@@ -885,7 +780,7 @@
                 </div>
             </section>
             <!-- ================================================ -->
-            <!-- ==========    Cart Section  End  Here   ======== -->
+            <!-- ==========    login Section  End  Here   ======== -->
             <!-- ================================================ -->
         </main>
 

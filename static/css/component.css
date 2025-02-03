@@ -304,9 +304,11 @@ ___________________________________*/
     border: 1px solid var(--border-color2);
 }
 
-.my-btn.my-btn-outline::after {
-    background-color: var(--white-off);
+.my-btn.my-btn-outline:hover {
+    background-color: var(--border-color);
 }
+
+
 
 .my-btn.my-btn-sm {
     padding: 10px 12px;
@@ -324,7 +326,7 @@ ___________________________________*/
     color: var(--white);
 }
 
-.my-secendary-btn::after {
+.my-secendary-btn:hover {
     background-color: var(--secondary-hover);
 }
 
@@ -1212,6 +1214,17 @@ input[type="radio"]:checked::after {
     border-radius: 3px;
 }
 
+.tag {
+    padding: 3px 6px;
+    color: var(--white);
+    font-size: 13px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+.tag.instock {
+    background-color: var(--secondary-hover);
+}
 
 .product-cart .base.new {
     animation: unset;
@@ -2108,7 +2121,7 @@ input[type="radio"]:checked::after {
 \*________________________________*/
 .pagination {
     /* background-color: var(--white-off); */
-    padding: 12px;
+    padding: 12px 0;
 }
 
 .pagination ul li {
@@ -2120,6 +2133,7 @@ input[type="radio"]:checked::after {
     border: 1px solid var(--border-color2);
     gap: 4px;
     font-weight: var(--fw-600);
+    cursor: pointer;
 }
 
 .pagination ul li a {
