@@ -2339,9 +2339,10 @@ ___________________________________*/
 \*________________________________*/
 @media (max-width:991px) {
     .brigtcamp {
-        max-width: 640px;
+        max-width: 680px;
         margin: 0 auto;
-        margin-top: 90px;
+        margin-top: 6px;
+
     }
 
     .orders-page {
